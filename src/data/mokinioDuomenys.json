@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "vardas": "Adam",
+      "pavarde": "Romka",
+      "gm": "1988-01-20",
+      "miestas": "Vilnius",
+      "programa": "Javascript",
+      "grupe": "JS-21/2",
+      "status": false
+    },
+    {
+      "id": 2,
+      "vardas": "Anton",
+      "pavarde": "Morkov",
+      "gm": "1928-03-24",
+      "miestas": "Vilnius",
+      "programa": "Javascript",
+      "grupe": "JS-21/2",
+      "status": false
+    },
+    {
+      "id": 3,
+      "vardas": "Andrej",
+      "pavarde": "Volejso",
+      "gm": "2002-01-30",
+      "miestas": "Kaunas",
+      "programa": "Javascript",
+      "grupe": "...",
+      "status": false
+    },
+    {
+      "id": 4,
+      "vardas": "Adam",
+      "pavarde": "Romka",
+      "gm": "1988-01-20",
+      "miestas": "Vilnius",
+      "programa": "Javascript",
+      "grupe": "JS-21/2",
+      "status": false
+    }
+]
