@@ -1,0 +1,20 @@
+[
+    {
+        "id": "html",
+        "img": "https://en.number13.de/content/images/2021/08/photo-1542831371-29b0f74f9713-4.jpg",
+        "title": "html",
+        "content": "As mokausi HTML"
+    },
+    {
+        "id": "css",
+        "img": "https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ",
+        "title": "css",
+        "content": "As mokausi CSS"    
+    },
+    {
+        "id": "javascript",
+        "img": "https://miro.medium.com/max/1400/0*2eQafAXZJRMGV2Q5",
+        "title": "javascript",
+        "content": "As mokausi JavaScript"
+    }
+]

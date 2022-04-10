@@ -1,0 +1,13 @@
+.Header-title{
+    color: green;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.Header-post{
+    font-style: italic;
+    color: blue;
+}
+.Header_image{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
