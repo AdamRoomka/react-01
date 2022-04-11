@@ -1,9 +1,17 @@
 import React from 'react'
+import { useState, useContext } from 'react';
+import { HeaderContext } from '../App';
 
 
 export default function Card({ name, email, id, image, location }) {
-   
-
+    const [like, setLike] = useState(0);
+    const value = useContext(HeaderContext);
+    
+    function Like(){
+        setLike(like + 1);
+        value.setLikes(value.likes + 1);
+    }
+    
     return (
         <div className="card mb-4 box-shadow">
             <div className="card-header">
@@ -17,7 +25,8 @@ export default function Card({ name, email, id, image, location }) {
                 </ul>
                 <button
                     type="button"
-                    className="btn btn-lg btn-block btn-outline-primary">
+                    className="btn btn-lg btn-block btn-outline-primary" onClick={Like}>
+                        {"Like " + like }
                 </button>
             </div>
         </div>

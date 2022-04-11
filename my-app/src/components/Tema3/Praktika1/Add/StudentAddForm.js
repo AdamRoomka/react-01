@@ -38,7 +38,7 @@ function StudentAddForm() {
   
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-    <form className="col-8 m-2 offset-2">
+    <div className="col-8 m-2 offset-2">
       <h2> Add New Student</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-3">
@@ -147,7 +147,7 @@ function StudentAddForm() {
           Add Student
         </button>
       </form>
-    </form>
+    </div>
   );
 }
 export default StudentAddForm

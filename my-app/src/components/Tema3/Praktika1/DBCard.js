@@ -22,7 +22,8 @@ function DBCard(){
 
     const taskData = students.map((data) => {
     return (
-      <ListCardMokinys key={data._id}
+      <ListCardMokinys 
+        key={data._id}
         id={data._id}
         vardas={data.name}
         pavarde={data.surname}
