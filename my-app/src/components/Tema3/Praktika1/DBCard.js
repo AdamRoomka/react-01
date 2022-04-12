@@ -22,6 +22,8 @@ function DBCard(){
 
     const taskData = students.map((data) => {
     return (
+      <>
+      
       <ListCardMokinys 
         key={data._id}
         id={data._id}
@@ -32,6 +34,7 @@ function DBCard(){
         programa={data.program}
         grupe={data.group}
       />
+      </>
     );
   });
   return <>{taskData}</>;
