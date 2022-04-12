@@ -1,4 +1,5 @@
 import React from "react";
+import './table.css'
 
 
 function ListCardMokinys({ id, vardas, pavarde, gm, miestas, programa, grupe, status}) {
@@ -57,15 +58,19 @@ function ListCardMokinys({ id, vardas, pavarde, gm, miestas, programa, grupe, st
   };
 
   return (
-    <div className="col-12 d-flex my-3">
-      <p className={"bg-light-yellow py-2 ps-1 m-0 w-75 rounded"}>
-        {vardas} {pavarde} {gim} {miestas} {programa} {grupe}
-      </p>
-      <button className="btn btn-light btn-sm mx-2">
-        Redaguoti
-      </button>
-        <button className="btn btn-danger btn-sm">Delete</button>
-    </div>
+    <>
+
+      <tr>
+        <td>{vardas}</td>
+        <td>{pavarde}</td>
+        <td>{gim}</td>
+        <td>{miestas}</td>
+        <td>{programa}</td>
+        <td>{grupe}</td>
+        <td><button className="btn btn-warning">Redaguoti</button></td>
+        <td><button className="btn btn-danger">Istrinti</button></td>
+      </tr>
+    </>
   );
 }
 

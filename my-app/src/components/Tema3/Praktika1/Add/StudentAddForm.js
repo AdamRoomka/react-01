@@ -41,7 +41,7 @@ function StudentAddForm() {
     <div className="col-8 m-2 offset-2">
       <h2> Add New Student</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="mb-3">
+        <div className="mb-2">
           <label htmlFor="firstName" className="form-label">
             Vardas
           </label>
@@ -56,7 +56,7 @@ function StudentAddForm() {
             <span className="text-danger fw-light">This field is required</span>
           )}
         </div>
-        <div className="mb-3">
+        <div className="mb-2">
           <label htmlFor="lastname" className="form-label">
             Pavarde
           </label>
@@ -71,7 +71,7 @@ function StudentAddForm() {
             <span className="text-danger fw-light">This field is required</span>
           )}
         </div>
-        <div className="mb-3">
+        <div className="mb-2">
           <label htmlFor="gm" className="form-label">
             Gimimo metai
           </label>
@@ -86,7 +86,7 @@ function StudentAddForm() {
             <span className="text-danger fw-light">This field is required</span>
           )}
         </div>
-        <div className="mb-3">
+        <div className="mb-2">
           <label htmlFor="city" className="form-label">
             Miestas
           </label>
@@ -94,14 +94,14 @@ function StudentAddForm() {
             type="text"
             className="form-control"
             id="city"
-            {...register("city", { pattern: /[A-Z][A-Za-z]/, required: true })}
+            {...register("city", { pattern: /[A-Z][A-Za-z]/, required: true, minLength: 3, maxLength: 20 })}
             onChange={(e)=>{setTown(e.target.value)}}
           />
           {errors.city && (
             <span className="text-danger fw-light">This field is required</span>
           )}
         </div>
-        <div className="mb-3">
+        <div className="mb-2">
           <label htmlFor="program" className="form-label">
             Programa
           </label>
@@ -116,7 +116,7 @@ function StudentAddForm() {
             <span className="text-danger fw-light">This field is required</span>
           )}
         </div>
-        <div className="mb-3">
+        <div className="mb-2">
           <label htmlFor="group" className="form-label">
             Grupe
           </label>

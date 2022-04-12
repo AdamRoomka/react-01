@@ -1,11 +1,8 @@
 import React from 'react'
-import './Tema3/tema3.css'
 import DBCard from './Tema3/Praktika1/DBCard'
 import StudentAddForm from './Tema3/Praktika1/Add/StudentAddForm'
+import './Tema3/Praktika1/table.css'
 
-  function paspaudzius(){
-    document.getElementById('hide').classList.toggle('hide');
-  }
 
 function Tema3() {
   return (
@@ -13,17 +10,27 @@ function Tema3() {
     
     <div className="container">
         <div className="row">
-          <div className="col-6">
+          <div className='col-4 position'>
+            <StudentAddForm />
+          </div>
+          <div className="col-8 right">
+          <table>
+            <tr>
+              <th>Vardas</th>
+              <th>Pavarde</th>
+              <th>Gimimo metai</th>
+              <th>miestas</th>
+              <th>Programa</th>
+              <th>Grupe</th>
+            </tr>
+
             <DBCard />
+          </table>
           </div>
 
         </div>
     </div>
-    <button onClick={paspaudzius} className='btn btn-success offset-1'> Prideti </button>
-
-    <div id='hide' className='hide' >
-      <StudentAddForm />
-    </div>
+      
 
     </>
   )
