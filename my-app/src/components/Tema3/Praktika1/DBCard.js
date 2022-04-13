@@ -4,6 +4,7 @@ import ListCardMokinys from "./ListCardMokinys";
 
 function DBCard(){
 
+  
   let [students, setStudents] = useState([]);
   // let [isLoading, setIsLoading] = useState(true);
 
@@ -20,10 +21,25 @@ function DBCard(){
     getAllStudents();
   }, [])
 
+
+  // DELETE METHOD
+  const deleteStudent = (id) => {
+    fetch(`http://localhost:3000/api/v1/students/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((res) => {
+      console.log(res);
+    });
+    // const counters = taskData.filter((c) => c.id !== id);
+    // setStudents(counters);
+  };
+
+
     const taskData = students.map((data) => {
     return (
       <>
-      
       <ListCardMokinys 
         key={data._id}
         id={data._id}
@@ -33,6 +49,7 @@ function DBCard(){
         miestas={data.town}
         programa={data.program}
         grupe={data.group}
+        deleteStudent={deleteStudent}
       />
       </>
     );

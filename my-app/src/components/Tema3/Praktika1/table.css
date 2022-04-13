@@ -1,5 +1,6 @@
 .position{
     position: fixed;
+    left: 2em;
 }
 .right{
     margin-left: 25em;

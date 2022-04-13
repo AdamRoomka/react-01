@@ -13,7 +13,7 @@ function Tema3() {
           <div className='col-4 position'>
             <StudentAddForm />
           </div>
-          <div className="col-8 right">
+          <div className="col right">
           <table>
             <tr>
               <th>Vardas</th>

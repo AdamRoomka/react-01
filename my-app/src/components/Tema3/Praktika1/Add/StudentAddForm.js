@@ -2,14 +2,14 @@ import React, {useState} from "react";
 import { useForm } from "react-hook-form";
 
 function StudentAddForm() {
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-
-
+  
   let [ name, setName] = useState("")
   let [ surname, setSurname] = useState("")
   let [ birthdate, setBirthdate] = useState("")
@@ -19,7 +19,6 @@ function StudentAddForm() {
   
 
   function onSubmit(e) {
-    console.log(name)
 
     const requestOptions = {
       method: 'POST',
@@ -29,12 +28,9 @@ function StudentAddForm() {
 
     fetch('http://localhost:3000/api/v1/students', requestOptions)
     .then(response => response.json())
-  
   }
 
-  function paspaudzius(){
-    document.getElementById('hide').classList.toggle('hide');
-  }
+  
   
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
@@ -46,6 +42,7 @@ function StudentAddForm() {
             Vardas
           </label>
           <input
+            // defaultValue={currentStudent.name}
             type="text"
             className="form-control"
             id="firstName field_ucfirst"
@@ -61,6 +58,7 @@ function StudentAddForm() {
             Pavarde
           </label>
           <input
+            // defaultValue={currentStudent.surname}
             type="text"
             className="form-control"
             id="lastname"
@@ -76,6 +74,7 @@ function StudentAddForm() {
             Gimimo metai
           </label>
           <input
+          // defaultValue={currentStudent.birthdate}
           type="date"
             className="form-control"
             id="gm"
@@ -91,6 +90,7 @@ function StudentAddForm() {
             Miestas
           </label>
           <input
+            // defaultValue={currentStudent.town}
             type="text"
             className="form-control"
             id="city"
@@ -105,7 +105,9 @@ function StudentAddForm() {
           <label htmlFor="program" className="form-label">
             Programa
           </label>
-          <select className="form-control" {...register("program", { required: true })} name="program" id="program" onChange={(e)=>{setProgram(e.target.value)}}>
+          <select 
+          // defaultValue={currentStudent.program} 
+          className="form-control" {...register("program", { required: true })} name="program" id="program" onChange={(e)=>{setProgram(e.target.value)}}>
             <option value=""> --- Program --- </option>
             <option value="JavaScript">JavaScript</option>
             <option value="Java">Java</option>
@@ -120,7 +122,9 @@ function StudentAddForm() {
           <label htmlFor="group" className="form-label">
             Grupe
           </label>
-          <select className="form-control" {...register("group", { required: true })} name="group" id="group" onChange={(e)=>{setGroup(e.target.value)}}>
+          <select 
+          // defaultValue={currentStudent.group} 
+          className="form-control" {...register("group", { required: true })} name="group" id="group" onChange={(e)=>{setGroup(e.target.value)}}>
             <option value=""> --- Group --- </option>
             <option value="JS-21/1">JS-21/1</option>
             <option value="JS-21/2">JS-21/2</option>
@@ -143,7 +147,7 @@ function StudentAddForm() {
           )}
         </div>
 
-        <button onClick={paspaudzius} type="submit" className="btn btn-success">
+        <button type="submit" className="btn btn-success">
           Add Student
         </button>
       </form>
