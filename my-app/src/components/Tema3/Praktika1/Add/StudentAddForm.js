@@ -30,7 +30,9 @@ function StudentAddForm() {
     .then(response => response.json())
   }
 
-  
+  function refreshPage() {
+    window.location.reload(false);
+  }
   
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
@@ -147,7 +149,7 @@ function StudentAddForm() {
           )}
         </div>
 
-        <button type="submit" className="btn btn-success">
+        <button type="submit" onClick={() =>refreshPage()} className="btn btn-success">
           Add Student
         </button>
       </form>
