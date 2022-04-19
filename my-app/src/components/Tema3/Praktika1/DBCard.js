@@ -6,14 +6,12 @@ function DBCard(){
 
   
   let [students, setStudents] = useState([]);
-  // let [isLoading, setIsLoading] = useState(true);
 
   const getAllStudents = async () => {
     fetch('http://localhost:3000/api/v1/students')
       .then(res => res.json())
       .then((json) => {
         setStudents(json.data.students);
-        // setIsLoading(false);
       })
   }
 
@@ -32,8 +30,6 @@ function DBCard(){
     }).then((res) => {
       console.log(res);
     });
-    // const counters = taskData.filter((c) => c.id !== id);
-    // setStudents(counters);
   };
 
 

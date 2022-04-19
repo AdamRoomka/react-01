@@ -4,6 +4,10 @@ import './table.css'
 
 function ListCardMokinys({ id, vardas, pavarde, gm, miestas, programa, grupe, editStudent, deleteStudent}) {
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   var gim = gm.toString().substr(0,10);
   
 
@@ -18,7 +22,7 @@ function ListCardMokinys({ id, vardas, pavarde, gm, miestas, programa, grupe, ed
         <td>{programa}</td>
         <td>{grupe}</td>
         <td><button onClick={() => editStudent(id)} className="btn btn-warning">Redaguoti</button></td>
-        <td><button onClick={() => deleteStudent(id)} className="btn btn-danger">Istrinti</button></td>
+        <td><button onClick={() => deleteStudent(id, refreshPage())} className="btn btn-danger">Istrinti</button></td>
       </tr>
     </>
   );
